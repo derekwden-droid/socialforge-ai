@@ -11,14 +11,9 @@ export default defineConfig({
         target: "https://api.anthropic.com",
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api\/anthropic/, ""),
-        headers: {
-          "anthropic-version": "2023-06-01",
-        },
+        headers: { "anthropic-version": "2023-06-01" },
       },
     },
   },
-  build: {
-    outDir: "dist",
-    sourcemap: true,
-  },
+  build: { outDir: "dist", sourcemap: true },
 });
